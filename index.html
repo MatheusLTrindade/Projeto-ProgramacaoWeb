@@ -1,12 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=2, initial-scale=1.0">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+
     <title>Projeto PW</title>
 </head>
 <body>
-    <h1> Dashboard controle de compra e troca de aparelhos </h1>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <img src="">
+                <h2>Armarios<span class="danger">JM</span>²</h2>
+            </div>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">groups</span>
+                    <h3>Clients</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">inventory_2</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">analytics</span>
+                    <h3>Sales</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">store</span>
+                    <h3>Store</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-------------------- END SIDEBAR -------------------->
+        <main>
+            <h1>Dashboard</h1>
+            
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="insights">
+                <div class="clients">
+                    <span class="material-icons-sharp">groups</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Clients</h3>
+                            <h1>1.537</h1>
+                        </div>
+                    </div>
+                    <a href="#">Show All</a>
+                </div>
+                <!-- END CLIENTS -->
+                <div class="products">
+                    <span class="material-icons-sharp">inventory_2</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Produts</h3>
+                            <h1>267</h1>
+                        </div>
+                    </div>
+                    <a href="#">Show All</a>
+                </div>
+                <!-- END PRODUCTS -->
+                <div class="sales">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Sales</h3>
+                            <h1>8.309</h1>
+                        </div>
+                    </div>
+                    <a href="#">Show All</a>
+                </div>
+                <!-- END SALES -->
+            </div>
+            <!-------------------- END INSIGHTS -------------------->
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Date</th>
+                            <th>Defect</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JavaScript -->
+                    </tbody>
+                </table>
+                <!-- END TABLE -->
+                <a href="#">Show All</a>
+            </div>
+        </main>
+        <!-------------------- END MAIN -------------------->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Matheus</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src=""> <!-- ADD+ -->
+                    </div>
+                </div>
+            </div>
+            <!-- END TOP -->
+            <div class="comments">
+                <h2>Coments</h2>
+                <div class="updates">
+
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="img/profile-2.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Brian O'Conner</b> Best home appliance store!</p>
+                            <small class="text-muted">2 Minutes Ago</small>
+                        </div>
+                    </div>
+
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="img/profile-3.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Megan Fox</b> Great quality products, can't wait to buy more.</p>
+                            <small class="text-muted">5 Minutes Ago</small>
+                        </div>
+                    </div>
+
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="img/profile-4.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Hannah Maloof</b> My products arrived super fast.</p>
+                            <small class="text-muted">17 Minutes Ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------- END COMMENTS -------------------->
+            <div class="available-produts">
+                <h2>Available Products</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JavaScript -->
+                    </tbody>
+                </table>
+                <!-- END TABLE -->
+                <a href="#">Show All</a>
+            </div>
+            <!-------------------- END RIGHT -------------------->
+    </div>
 </body>
 </html>
