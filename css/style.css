@@ -13,7 +13,6 @@
     --color-info-light: #DCE1EB;
     --color-dark: #363949;
     --color-light: rgba(132, 139, 200, 0.18);
-    --color-primary-variant: #111E88;
     --color-dark-variant: #677483;
     --color-background: #F6F6F9;
 
@@ -305,7 +304,7 @@ main .insights a{
     margin-top: 1rem;
     text-align: center;
     display: block;
-    color: var(--color-primary);
+    color: var(--color-warning);
 }
 
 /* =================== RECENT ORDERS ==================== */
@@ -345,7 +344,7 @@ main .recent-orders a{
     text-align: center;
     display: block;
     margin: 1rem auto;
-    color: var(--color-primary);
+    color: var(--color-warning);
 }
 
 /* =================== RIGHT ==================== */
@@ -431,7 +430,7 @@ main .recent-orders a{
     text-align: center;
     display: block;
     margin: 1rem auto;
-    color: var(--color-primary);
+    color: var(--color-warning);
 }
 
 /* =================== @MEDIA ULTRAWIDE ==================== */
