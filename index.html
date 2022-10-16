@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=2, initial-scale=1.0">
 
     <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Projeto PW</title>
 </head>
@@ -15,9 +17,15 @@
     <div class="container">
         <aside>
             <div class="top">
-                <img src="">
-                <h2>Armarios<span class="danger">JM</span>²</h2>
+                <div class="logo">
+                    <img src="">
+                    <h2>Armarinhos<span class="danger">JM</span>²</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>                
             </div>
+            
             <div class="sidebar">
                 <a href="#" class="active">
                     <span class="material-icons-sharp">grid_view</span>
@@ -63,7 +71,9 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Clients</h3>
-                            <h1>1.537</h1>
+                        </div>
+                        <div class="progress">
+                            <h1>1.370</h1>
                         </div>
                     </div>
                     <a href="#">Show All</a>
@@ -74,6 +84,8 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Produts</h3>
+                        </div>
+                        <div class="progress">
                             <h1>267</h1>
                         </div>
                     </div>
@@ -85,6 +97,8 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Sales</h3>
+                        </div>
+                        <div class="progress">
                             <h1>8.309</h1>
                         </div>
                     </div>
@@ -132,42 +146,7 @@
                 </div>
             </div>
             <!-- END TOP -->
-            <div class="comments">
-                <h2>Coments</h2>
-                <div class="updates">
-
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="img/profile-2.jpg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Brian O'Conner</b> Best home appliance store!</p>
-                            <small class="text-muted">2 Minutes Ago</small>
-                        </div>
-                    </div>
-
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="img/profile-3.jpg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Megan Fox</b> Great quality products, can't wait to buy more.</p>
-                            <small class="text-muted">5 Minutes Ago</small>
-                        </div>
-                    </div>
-
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="img/profile-4.jpg" alt="">
-                        </div>
-                        <div class="message">
-                            <p><b>Hannah Maloof</b> My products arrived super fast.</p>
-                            <small class="text-muted">17 Minutes Ago</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-------------------- END COMMENTS -------------------->
+            
             <div class="available-produts">
                 <h2>Available Products</h2>
                 <table>
@@ -187,5 +166,8 @@
             </div>
             <!-------------------- END RIGHT -------------------->
     </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
