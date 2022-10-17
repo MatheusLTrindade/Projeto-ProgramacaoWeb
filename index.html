@@ -27,43 +27,39 @@
             </div>
             
             <div class="sidebar">
-                <a href="#" class="active">
+                <a href="" id="dashboard" class="active">
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <a href="#clients" id="clients">
                     <span class="material-icons-sharp">groups</span>
                     <h3>Clients</h3>
                 </a>
-                <a href="#">
+                <a href="#products" id="products">
                     <span class="material-icons-sharp">inventory_2</span>
                     <h3>Products</h3>
                 </a>
-                <a href="#">
+                <a href="#sales" id="sales">
                     <span class="material-icons-sharp">analytics</span>
                     <h3>Sales</h3>
                 </a>
-                <a href="#">
+                <a href="#orders" id="orders">
                     <span class="material-icons-sharp">receipt_long</span>
                     <h3>Orders</h3>
                 </a>
-                <a href="#">
+                <a href="#store" id="store">
                     <span class="material-icons-sharp">store</span>
                     <h3>Store</h3>
                 </a>
-                <a href="#">
+                <a href="javascript:close_window();">
                     <span class="material-icons-sharp">logout</span>
                     <h3>Logout</h3>
                 </a>
             </div>
         </aside>
         <!-------------------- END SIDEBAR -------------------->
-        <main>
+        <main class="main">
             <h1>Dashboard</h1>
-            
-            <div class="date">
-                <input type="date">
-            </div>
 
             <div class="insights">
                 <div class="clients">
@@ -112,8 +108,9 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Client</th>
+                            <th>Order Number</th>
                             <th>Date</th>
+                            <th>Client</th>
                             <th>Defect</th>
                         </tr>
                     </thead>
@@ -122,7 +119,7 @@
                     </tbody>
                 </table>
                 <!-- END TABLE -->
-                <a href="#">Show All</a>
+                <a href="#orders" class="orders-all">Show All</a>
             </div>
         </main>
         <!-------------------- END MAIN -------------------->
@@ -167,7 +164,19 @@
             <!-------------------- END RIGHT -------------------->
     </div>
 
+    <!-- JQuery -->
+    <script>
+        $("h3.symple-toggle-trigger").click(function(){
+            $(this).toggleClass("active").next().slideToggle("fast");
+            return false;
+        });
+    </script>
+
     <!-- JavaScript -->
+    <script src="js/tables/clients.js"></script>
+    <script src="js/tables/products.js"></script>
+    <script src="js/tables/sales.js"></script>
+    <script src="js/tables/orders.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
