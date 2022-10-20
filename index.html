@@ -18,7 +18,7 @@
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="">
+                    <img src="https://img2.gratispng.com/20180425/tee/kisspng-gray-wolf-logo-photography-wolf-logo-5ae014b8d9bff4.9472205715246348088919.jpg">
                     <h2>Loja <span class="danger">JM</span>²</h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -72,7 +72,7 @@
                             <h1>1.370</h1>
                         </div>
                     </div>
-                    <a href="#">Show All</a>
+                    <a href="#clients" class="clients-all">Show All</a>
                 </div>
                 <!-- END CLIENTS -->
                 <div class="products">
@@ -85,7 +85,7 @@
                             <h1>267</h1>
                         </div>
                     </div>
-                    <a href="#">Show All</a>
+                    <a href="#products" class="products-all">Show All</a>
                 </div>
                 <!-- END PRODUCTS -->
                 <div class="sales">
@@ -95,31 +95,88 @@
                             <h3>Sales</h3>
                         </div>
                         <div class="progress">
-                            <h1>8.309</h1>
+                            <h1>3.029</h1>
                         </div>
                     </div>
-                    <a href="#">Show All</a>
+                    <a href="#sales" class="sales-all">Show All</a>
                 </div>
                 <!-- END SALES -->
             </div>
             <!-------------------- END INSIGHTS -------------------->
             <div class="recent-orders">
                 <h2>Recent Orders</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Order Number</th>
-                            <th>Date</th>
-                            <th>Client</th>
-                            <th>Defect</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- JavaScript -->
-                    </tbody>
-                </table>
+                    <div class="container-table">
+                        <table class="dash">
+                            <thead>
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Date</th>
+                                    <th>Client</th>
+                                    <th>Defect</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JavaScript -->
+                            </tbody>
+                        </table>
+                        <table class="cli">
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th>CPF</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JavaScript -->
+                            </tbody>
+                        </table>
+                        <table class="pro">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JavaScript -->
+                            </tbody>
+                        </table>
+                        <table class="sal">
+                            <thead>
+                                <tr>
+                                    <th>Sale Number</th>
+                                    <th>Date</th>
+                                    <th>Client</th>
+                                    <th>Product</th>
+                                    <th>Warranty</th>
+                                    <th>Defect</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JavaScript -->
+                            </tbody>
+                        </table>
+                        <table class="ord">
+                            <thead>
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Date</th>
+                                    <th>Client</th>
+                                    <th>Product</th>
+                                    <th>Defect</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
                 <!-- END TABLE -->
-                <a href="#orders" class="orders-all">Show All</a>
+                <a href="#orders" onclick="ord();" class="orders-all">Show All</a>
             </div>
         </main>
         <!-------------------- END MAIN -------------------->
@@ -138,7 +195,7 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src=""> <!-- ADD+ -->
+                        <img src="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"> <!-- ADD+ -->
                     </div>
                 </div>
             </div>
@@ -159,7 +216,7 @@
                     </tbody>
                 </table>
                 <!-- END TABLE -->
-                <a href="#">Show All</a>
+                <a href="#products" class="products-all">Show All</a>
             </div>
             <!-------------------- END RIGHT -------------------->
     </div>

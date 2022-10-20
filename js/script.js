@@ -5,16 +5,26 @@ const themeToggler = document.querySelector(".theme-toggler");
 const sidebar = document.querySelector(".sidebar");
 const menuDashboard = document.querySelector("#dashboard");
 const menuClients = document.querySelector("#clients");
+const clientsALL = document.querySelector(".clients-all");
 const menuProducts = document.querySelector("#products");
+const productsALL = document.querySelector(".products-all");
 const menuSales = document.querySelector("#sales");
+const salesALL = document.querySelector(".sales-all");
 const menuOrders = document.querySelector("#orders");
+const orderALL = document.querySelector(".orders-all");
 const menuStore = document.querySelector("#store");
 const main = document.querySelector(".main");
 const insights = document.querySelector(".insights");
 const recentOrders = document.querySelector(".recent-orders");
+const containerTable = document.querySelector(".container-table");
 const availableProduts = document.querySelector(".available-produts");
+const dash = document.querySelector(".dash");
+const cli = document.querySelector(".cli");
+const pro = document.querySelector(".pro");
+const sal = document.querySelector(".sal");
+const ord = document.querySelector(".ord");
 
-const orderALL = document.querySelector(".orders-all");
+
 
 // sidebar.querySelector('a:nth-child(4)').classList.toggle('active');
 // sidebar.querySelector('a:nth-child(6)').classList.toggle('active');
@@ -44,67 +54,88 @@ reset = function(){
 
 // Delete table history
 apagar = function(){
+
     let td = recentOrders.querySelectorAll('td');
     for(item in td) 
-        if(td[item].parentNode) td[item].parentNode.removeChild(td[item]);
-    }
+    if(td[item].parentNode) td[item].parentNode.removeChild(td[item]);
+}
 
+// DASHBOARD
 menuDashboard.addEventListener('click', () => {
     menuDashboard.classList.toggle('active');
 })
 
 // Fill orders in table CLIENTS
+clientsALL.addEventListener('click', () =>{
+    client();
+})
 menuClients.addEventListener('click', () => {
+    client();
+})
+function client(){
     apagar();
+    setTimeout(() =>{
+        console.log("cheguei");
+    }, 10000)
     menuClients.classList.toggle('active');
+    dash.style.display = "none";    
+    pro.style.display = "none";
+    sal.style.display = "none";
+    ord.style.display = "none";
+    cli.style.display = "table";
+    containerTable.style.height = "35rem";
     orderALL.style.visibility = "hidden";
     insights.style.display = "none";
     availableProduts.style.display = "none";
     main.style.width = "140%";
-    //TODO: verificar recursive
-    // if(style = "@media(min-width:2400px)"){
+    // TODO: verificar recursive
+    // if(style == "@media(min-width:2400px)"){
     //     main.style.width = "110%";
-    // } else if (style === "@media(min-width:1400px)"){
+    // } else if (style == "@media(min-width:1400px)"){
     //     main.style.width = "120%";
-    // } else if(style === "@media(min-width:1201px)"){
+    // } else if(style == "@media(min-width:1201px)"){
     //     main.style.width = "140%";
-    // } else if (style === "@media(max-width:1200px)"){
+    // } else if (style == "@media(max-width:1200px)"){
     //     main.style.width = "100%";
     // } else if (style == "@media(max-width:768px)"){
     //     main.style.width = "100%";
     // } 
     recentOrders.querySelector('h2').textContent = "Clients";
-    recentOrders.querySelector('th:nth-child(1)').textContent = "Client";
-    recentOrders.querySelector('th:nth-child(2)').textContent = "CPF";
-    recentOrders.querySelector('th:nth-child(3)').textContent = "Email";
-    recentOrders.querySelector('th:nth-child(4)').textContent = "Endereco";
     Clients.forEach(order => {
         const tr = document.createElement('tr');
         const trContent = `
                             <td>${order.Client}</td> 
                             <td>${order.Cpf}</td>
                             <td>${order.Email}</td>
-                            <td>${order.Endereco}</td>
+                            <td>${order.Address}</td>
                             `;
                             // <td> Célula de dados
     tr.innerHTML = trContent;
-    recentOrders.querySelector('table tbody').appendChild(tr);
+    cli.querySelector('table tbody').appendChild(tr);
     })
-})
+}
 
 // Fill orders in table PRODUCTS
+productsALL.addEventListener('click', () =>{
+    product();
+})
 menuProducts.addEventListener('click', () => {
+    product();
+})
+function product(){
     apagar();
     menuProducts.classList.toggle('active');
+    dash.style.display = "none";
+    cli.style.display = "none";
+    sal.style.display = "none";
+    ord.style.display = "none";
+    pro.style.display = "table";
+    containerTable.style.height = "35rem";
     orderALL.style.visibility = "hidden";
     insights.style.display = "none";
     availableProduts.style.display = "none";
-    // main.style.width = "140%";
+    main.style.width = "140%";
     recentOrders.querySelector('h2').textContent = "Products";
-    recentOrders.querySelector('th:nth-child(1)').textContent = "Code";
-    recentOrders.querySelector('th:nth-child(2)').textContent = "Description";
-    recentOrders.querySelector('th:nth-child(3)').textContent = "Quantity";
-    recentOrders.querySelector('th:nth-child(4)').textContent = "Value";
     Products.forEach(order => {
         const tr = document.createElement('tr');
         const trContent = `
@@ -115,23 +146,31 @@ menuProducts.addEventListener('click', () => {
                             `;
                             // <td> Célula de dados
     tr.innerHTML = trContent;
-    recentOrders.querySelector('table tbody').appendChild(tr);
+    pro.querySelector('table tbody').appendChild(tr);
     })
-})
+}
 
 // Fill orders in table Sales
+salesALL.addEventListener('click', () => {
+    sale();
+})
 menuSales.addEventListener('click', () => {
+    sale();
+})
+function sale (){
     apagar();
     menuSales.classList.toggle('active');
+    dash.style.display = "none";
+    cli.style.display = "none";
+    pro.style.display = "none";
+    ord.style.display = "none";
+    sal.style.display = "table";
+    containerTable.style.height = "35rem";
     orderALL.style.visibility = "hidden";
     insights.style.display = "none";
     availableProduts.style.display = "none";
     main.style.width = "140%";
     recentOrders.querySelector('h2').textContent = "Sales";
-    recentOrders.querySelector('th:nth-child(1)').textContent = "Sale Number";
-    recentOrders.querySelector('th:nth-child(2)').textContent = "Date";
-    recentOrders.querySelector('th:nth-child(3)').textContent = "Client";
-    recentOrders.querySelector('th:nth-child(4)').textContent = "Product";
     Sales.forEach(order => {
         const tr = document.createElement('tr');
         const trContent = `
@@ -142,25 +181,33 @@ menuSales.addEventListener('click', () => {
                             <td>${order.Warranty}</td>
                             <td>${order.Defect}</td>
                             `;
-                            // <td> Célula de dados
-    tr.innerHTML = trContent;
-    recentOrders.querySelector('table tbody').appendChild(tr);
+        // <td> Célula de dados
+        tr.innerHTML = trContent;
+        sal.querySelector('table tbody').appendChild(tr);
     })
-})
-
+}
+    
 // Fill orders in table ORDERS
+orderALL.addEventListener('click', ()=> {
+    order();
+})
 menuOrders.addEventListener('click', () => {
+    order();
+})
+function order(){
     apagar();
     menuOrders.classList.toggle('active');
+    dash.style.display = "none";
+    cli.style.display = "none";
+    sal.style.display = "none";
+    sal.style.display = "none";
+    ord.style.display = "table";
+    containerTable.style.height = "35rem";
     orderALL.style.visibility = "hidden";
     insights.style.display = "none";
     availableProduts.style.display = "none";
     main.style.width = "140%";
     recentOrders.querySelector('h2').textContent = "Orders";
-    recentOrders.querySelector('th:nth-child(1)').textContent = "OrderNumber";
-    recentOrders.querySelector('th:nth-child(2)').textContent = "Date";
-    recentOrders.querySelector('th:nth-child(3)').textContent = "Client";
-    recentOrders.querySelector('th:nth-child(4)').textContent = "Product";
 
     const test = document.createElement('th');
     const testContent = `<th>Defect</th>`;
@@ -177,9 +224,9 @@ menuOrders.addEventListener('click', () => {
                             `;
                             // <td> Célula de dados
     tr.innerHTML = trContent;
-    recentOrders.querySelector('table tbody').appendChild(tr);
+    ord.querySelector('table tbody').appendChild(tr);
     })
-})
+}
 
 // Fill orders in table RECENT ORDERS
 function ordemCrescente(a, b) {
@@ -224,3 +271,6 @@ function close_window() {
 
 //TODO: ver os redirecionamentos dos SHOW ALL 
 $('.orders-all').trigger('#orders');
+
+
+
