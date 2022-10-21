@@ -47,22 +47,19 @@ themeToggler.addEventListener('click', () => {
     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
 })
 
-// Reset Page
-reset = function(){
-    
-}
-
 // Delete table history
-apagar = function(){
-
-    let td = recentOrders.querySelectorAll('td');
-    for(item in td) 
-    if(td[item].parentNode) td[item].parentNode.removeChild(td[item]);
+function apagar(id){
+    let elemento = document.getElementById(id);
+    elemento.replaceChildren();
 }
 
 // DASHBOARD
 menuDashboard.addEventListener('click', () => {
-    menuDashboard.classList.toggle('active');
+    menuDashboard.classList.add('active');
+    menuClients.classList.remove('active');
+    menuProducts.classList.remove('active');
+    menuSales.classList.remove('active');
+    menuOrders.classList.remove('active');
 })
 
 // Fill orders in table CLIENTS
@@ -73,11 +70,15 @@ menuClients.addEventListener('click', () => {
     client();
 })
 function client(){
-    apagar();
+    apagar('tbody_client');
     setTimeout(() =>{
         console.log("cheguei");
     }, 10000)
-    menuClients.classList.toggle('active');
+    menuClients.classList.add('active');
+    menuDashboard.classList.remove('active');
+    menuProducts.classList.remove('active');
+    menuSales.classList.remove('active');
+    menuOrders.classList.remove('active');
     dash.style.display = "none";    
     pro.style.display = "none";
     sal.style.display = "none";
@@ -88,6 +89,12 @@ function client(){
     insights.style.display = "none";
     availableProduts.style.display = "none";
     main.style.width = "140%";
+
+    if(style = "@media(max-width:768px)"){
+        main.style.width = "80%";
+    } else if(style = "@media(min-width:1400"){
+        main.style.width = "110%"
+    }
     // TODO: verificar recursive
     // if(style == "@media(min-width:2400px)"){
     //     main.style.width = "110%";
@@ -123,8 +130,12 @@ menuProducts.addEventListener('click', () => {
     product();
 })
 function product(){
-    apagar();
-    menuProducts.classList.toggle('active');
+    apagar('tbody_product');
+    menuProducts.classList.add('active');
+    menuDashboard.classList.remove('active');
+    menuClients.classList.remove('active');
+    menuSales.classList.remove('active');
+    menuOrders.classList.remove('active');
     dash.style.display = "none";
     cli.style.display = "none";
     sal.style.display = "none";
@@ -158,8 +169,12 @@ menuSales.addEventListener('click', () => {
     sale();
 })
 function sale (){
-    apagar();
-    menuSales.classList.toggle('active');
+    apagar('tbody_sale');
+    menuSales.classList.add('active');
+    menuDashboard.classList.remove('active');
+    menuClients.classList.remove('active');
+    menuProducts.classList.remove('active');
+    menuOrders.classList.remove('active');
     dash.style.display = "none";
     cli.style.display = "none";
     pro.style.display = "none";
@@ -176,7 +191,7 @@ function sale (){
         const trContent = `
                             <td>${order.SaleNumber}</td> 
                             <td>${order.Date}</td>
-                            <td>${order.Quantity}</td>
+                            <td>${order.Client}</td>
                             <td>${order.Product}</td>
                             <td>${order.Warranty}</td>
                             <td>${order.Defect}</td>
@@ -195,8 +210,12 @@ menuOrders.addEventListener('click', () => {
     order();
 })
 function order(){
-    apagar();
-    menuOrders.classList.toggle('active');
+    apagar('tbody_order');
+    menuOrders.classList.add('active');
+    menuDashboard.classList.remove('active');
+    menuClients.classList.remove('active');
+    menuProducts.classList.remove('active');
+    menuSales.classList.remove('active');
     dash.style.display = "none";
     cli.style.display = "none";
     sal.style.display = "none";

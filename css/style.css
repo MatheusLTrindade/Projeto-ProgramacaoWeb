@@ -4,10 +4,10 @@
 /* =================== ROOT VARIABLES ==================== */
 :root{
     /* == COLOR == */
-    --color-primary: #7380EC;
-    --color-danger: #FF7782;
-    --color-success: #41F1B6;
-    --color-warning: #FFBB55;
+    --color-primary: #08D9D6;
+    --color-danger: #FF2E63;
+    --color-success: #38E54D;
+    --color-warning: #D67D3E;
     --color-white: #FFF;
     --color-info-dark: #7D8DA1;
     --color-info-light: #DCE1EB;
