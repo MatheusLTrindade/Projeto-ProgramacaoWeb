@@ -8,6 +8,7 @@ const menuClients = document.querySelector("#clients");
 const clientsALL = document.querySelector(".clients-all");
 const menuProducts = document.querySelector("#products");
 const productsALL = document.querySelector(".products-all");
+const productsALL2 = document.querySelector(".products-all2");
 const menuSales = document.querySelector("#sales");
 const salesALL = document.querySelector(".sales-all");
 const menuOrders = document.querySelector("#orders");
@@ -89,24 +90,6 @@ function client(){
     insights.style.display = "none";
     availableProduts.style.display = "none";
     main.style.width = "140%";
-
-    if(style = "@media(max-width:768px)"){
-        main.style.width = "80%";
-    } else if(style = "@media(min-width:1400"){
-        main.style.width = "110%"
-    }
-    // TODO: verificar recursive
-    // if(style == "@media(min-width:2400px)"){
-    //     main.style.width = "110%";
-    // } else if (style == "@media(min-width:1400px)"){
-    //     main.style.width = "120%";
-    // } else if(style == "@media(min-width:1201px)"){
-    //     main.style.width = "140%";
-    // } else if (style == "@media(max-width:1200px)"){
-    //     main.style.width = "100%";
-    // } else if (style == "@media(max-width:768px)"){
-    //     main.style.width = "100%";
-    // } 
     recentOrders.querySelector('h2').textContent = "Clients";
     Clients.forEach(order => {
         const tr = document.createElement('tr');
@@ -124,6 +107,9 @@ function client(){
 
 // Fill orders in table PRODUCTS
 productsALL.addEventListener('click', () =>{
+    product();
+})
+productsALL2.addEventListener('click', () =>{
     product();
 })
 menuProducts.addEventListener('click', () => {
@@ -287,9 +273,6 @@ function close_window() {
       window.location.href = "https://google.com/";
     }
 }
-
-//TODO: ver os redirecionamentos dos SHOW ALL 
-$('.orders-all').trigger('#orders');
 
 
 
